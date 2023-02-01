@@ -1,6 +1,6 @@
 <?php
 
-namespace Acaronlex\LaravelCalendar;
+namespace IngressITSolutions\LaravelCalendar;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
@@ -14,13 +14,13 @@ class ServiceProvider extends BaseServiceProvider
     public function register()
     {
         $this->app->bind('laravel-calendar', function ($app) {
-            return $app->make('Acaronlex\LaravelCalendar\Calendar');
+            return $app->make('IngressITSolutions\LaravelCalendar\Calendar');
         });
     }
 
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/views/', 'laravel-calendar');
+        $this->loadViewsFrom(__DIR__ . '/views/', 'laravel-calendar');
     }
 
     /**

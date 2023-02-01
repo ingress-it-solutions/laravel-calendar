@@ -1,6 +1,6 @@
 <?php
 
-namespace Acaronlex\LaravelCalendar;
+namespace IngressITSolutions\LaravelCalendar;
 
 use DateTime;
 
@@ -51,14 +51,21 @@ class SimpleEvent implements IdentifiableEvent
      * @param int|string|null $id
      * @param array           $options
      */
-    public function __construct($title, $isAllDay, $start, $end, $id = null, $options = [])
-    {
-        $this->title    = $title;
+    public function __construct(
+        $title,
+        $isAllDay,
+        $start,
+        $end,
+        $id = null,
+        $options = []
+    ) {
+        $this->title = $title;
         $this->isAllDay = $isAllDay;
-        $this->start    = $start instanceof DateTime ? $start : new DateTime($start);
-        $this->end      = $start instanceof DateTime ? $end : new DateTime($end);
-        $this->id       = $id;
-        $this->options  = $options;
+        $this->start =
+            $start instanceof DateTime ? $start : new DateTime($start);
+        $this->end = $start instanceof DateTime ? $end : new DateTime($end);
+        $this->id = $id;
+        $this->options = $options;
     }
 
     /**

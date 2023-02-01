@@ -1,6 +1,6 @@
 <?php
 
-namespace Acaronlex\LaravelCalendar;
+namespace IngressITSolutions\LaravelCalendar;
 
 use Illuminate\Support\Collection;
 
@@ -41,7 +41,9 @@ class EventCollection
             'end' => $event->getEnd()->format('c'),
         ];
 
-        $eventOptions = method_exists($event, 'getEventOptions') ? $event->getEventOptions() : [];
+        $eventOptions = method_exists($event, 'getEventOptions')
+            ? $event->getEventOptions()
+            : [];
 
         return array_merge($eventArray, $eventOptions, $customAttributes);
     }

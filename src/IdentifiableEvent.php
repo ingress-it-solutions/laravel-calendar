@@ -1,6 +1,6 @@
 <?php
 
-namespace Acaronlex\LaravelCalendar;
+namespace IngressITSolutions\LaravelCalendar;
 
 interface IdentifiableEvent extends Event
 {
